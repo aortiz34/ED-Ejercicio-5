@@ -41,7 +41,7 @@ export default class Inventory {
         let div =document.querySelector("#detail");
         let pos = document.getElementById("numberPosition");
         if(pos.value){
-            if (pos.value <= this._inventory.length + 1 && this._inventory.length < 20) {
+            if (pos.value <= this._inventory.length + 1 && this._inventory.length < 20 && this.searchProduct(pos.value) == null) {
                 this._inventory.push(product);
                 for (let i = this._inventory.length - 1; i >= pos.value; i--) {
                     let aux  = this._inventory[i];
